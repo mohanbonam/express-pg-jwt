@@ -1,0 +1,28 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "name": "Fred",
+    "email": "fred@email.com",
+    "password": "passinfred"
+}
+
+###
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "bob@email.com",
+    "password": "passbobin"
+}
+
+
+###
+GET http://localhost:3000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZTI0N2ZkMDMtYmEwMi00NWE1LTkyZjctMDM0MTY5NTYzOWZiIiwidXNlcl9uYW1lIjoiQm9iIiwidXNlcl9lbWFpbCI6ImJvYkBlbWFpbC5jb20iLCJpYXQiOjE2NDg4NDQzMjIsImV4cCI6MTY0ODg0NDM0Mn0.vx-VaqNKdWR3mUB1ozkjxw3UXAhEb3V2a7EJ3xsVx8U
+
+###
+GET http://localhost:3000/api/auth/refresh_token
+
+###
+DELETE http://localhost:3000/api/auth/refresh_token
